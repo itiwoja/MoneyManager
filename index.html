@@ -3,10 +3,80 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta http-equiv="refresh" content="0; url=./entry.html" />
+    <meta name="theme-color" content="#0f172a" />
     <title>MoneyManager</title>
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./app.js"></script>
   </head>
-  <body>
-    <p><a href="./entry.html">entry.html に移動します</a></p>
+  <body data-page="entry">
+    <div class="app-shell">
+      <header class="hero">
+        <p class="eyebrow">MoneyManager</p>
+        <h1>入金・出金を登録</h1>
+        <p class="lede">金額、日付、何をしたかを記録します。</p>
+      </header>
+
+      <nav class="page-nav" aria-label="画面切り替え">
+        <a class="page-tab is-active" href="./index.html">登録画面</a>
+        <a class="page-tab" href="./data.html">データ画面</a>
+      </nav>
+
+      <main class="content">
+        <section class="card summary-card">
+          <div class="summary-grid">
+            <div>
+              <span class="label">今月の収入</span>
+              <strong id="incomeTotal">¥0</strong>
+            </div>
+            <div>
+              <span class="label">今月の支出</span>
+              <strong id="expenseTotal">¥0</strong>
+            </div>
+            <div>
+              <span class="label">残高</span>
+              <strong id="balanceTotal">¥0</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="card form-card">
+          <h2>入出金を登録</h2>
+          <form id="entryForm" autocomplete="off">
+            <div class="field-group">
+              <label for="entryType">種類</label>
+              <div class="segmented" role="radiogroup" aria-label="種類">
+                <input type="radio" name="entryType" id="typeIncome" value="income" checked />
+                <label for="typeIncome">入金</label>
+                <input type="radio" name="entryType" id="typeExpense" value="expense" />
+                <label for="typeExpense">出金</label>
+              </div>
+            </div>
+
+            <div class="field-grid">
+              <div class="field">
+                <label for="amount">金額</label>
+                <input id="amount" name="amount" type="number" min="0" step="1" inputmode="numeric" placeholder="1000" required />
+              </div>
+              <div class="field">
+                <label for="entryDate">日付</label>
+                <input id="entryDate" name="entryDate" type="date" required />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="note">何をしたか</label>
+              <input id="note" name="note" type="text" maxlength="40" placeholder="例: ランチ代、給与、交通費" />
+            </div>
+
+            <div class="actions">
+              <button type="submit" class="primary">登録する</button>
+              <button type="button" id="clearAllButton" class="secondary">全件削除</button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
