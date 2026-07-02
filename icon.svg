@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="MoneyManager">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="120" fill="#08111f"/>
+  <circle cx="256" cy="256" r="170" fill="url(#g)" opacity="0.18"/>
+  <path d="M166 182h180a18 18 0 0 1 18 18v112a18 18 0 0 1-18 18H166a18 18 0 0 1-18-18V200a18 18 0 0 1 18-18Z" fill="#e5eefc"/>
+  <path d="M186 220h140v26H186zm0 46h108v26H186zm0 46h74v20h-74z" fill="#08111f" opacity="0.92"/>
+  <circle cx="346" cy="300" r="32" fill="#22c55e"/>
+  <path d="M336 300h20m-10-10v20" stroke="#08111f" stroke-width="12" stroke-linecap="round"/>
+</svg>
