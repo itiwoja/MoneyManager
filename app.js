@@ -66,7 +66,7 @@ const renderEntries = () => {
     title.className = "entry-title";
     const badge = document.createElement("span");
     badge.className = `badge ${entry.type === "expense" ? "expense" : ""}`;
-    badge.textContent = entry.type === "income" ? "出勤" : "支出";
+    badge.textContent = entry.type === "income" ? "出金" : "支出";
 
     const amount = document.createElement("div");
     amount.className = "entry-amount";

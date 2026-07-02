@@ -6,7 +6,7 @@
   "display": "standalone",
   "background_color": "#08111f",
   "theme_color": "#0f172a",
-  "description": "スマホで出勤と支出を記録する軽量PWA",
+  "description": "スマホで出金と支出を記録する軽量PWA",
   "icons": [
     {
       "src": "./icon.svg",
